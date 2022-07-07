@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var employee_1 = require("./employee");
+var employeeManager_1 = require("./employeeManager");
+var employee1 = new employee_1.Employee('Huy', 'A', '1/1/1999', 'Hà Nội', 'admin');
+var employee2 = new employee_1.Employee('Huy', 'B', '2/2/2000', 'Hà Nam', 'user');
+var employee3 = new employee_1.Employee('Huy', 'C', '3/3/2002', 'Hà tĩnh', 'other');
+var manager = new employeeManager_1.EmployeeManager();
+manager.setEmployee(employee1);
+manager.setEmployee(employee2);
+manager.setEmployee(employee3);
+// console.log(manager.getManger());
+// console.log(manager.deleteSomeone('Huy','B'));
+manager.editSomeOne('Huy', 'A', '5/5/2004', 'QO', 'Other');
+console.log(manager.getManger());
